@@ -1,7 +1,5 @@
 package com.hangnguyen.tictactoe.service;
 
-import java.util.List;
-
 import org.springframework.stereotype.Service;
 
 import com.hangnguyen.tictactoe.model.User;
@@ -16,7 +14,11 @@ public class UserService {
     this.repository = repository;
   }
 
-  public Player findOrCreateUser(User user) {
+  public Player login(User user) {
+    return this.findOrCreateUser(user);
+  }
+
+  private Player findOrCreateUser(User user) {
     Player playerEntity = new Player();
     playerEntity.setName(user.getUserName());
 
