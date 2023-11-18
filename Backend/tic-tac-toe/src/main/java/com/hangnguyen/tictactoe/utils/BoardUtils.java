@@ -28,7 +28,7 @@ public class BoardUtils {
   }
 
   public static List<Integer> getInitialCells (){
-    return IntStream.rangeClosed(1, 10).boxed().collect(Collectors.toList());
+    return IntStream.rangeClosed(1, 9).boxed().collect(Collectors.toList());
   }
 
 
